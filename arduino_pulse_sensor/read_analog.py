@@ -32,69 +32,11 @@ IBI -> interbeat interval
 
 """
 
-# Testing how serial port interfaces with Python
-""" 
-if __name__ == "__main__":
-    port = 
-    # port immediately opened on object creation
-    ser = serial.Serial(port, baud)
-    idx = 0
-    # time.sleep(5)
-    while idx < 10:
-    #     # print(ser.readline())
-        idx += 1
-        ans = ser.readline()
-    # ser.close()
-    start_time = time.time()
-    # ans = ser.readline()
-    ser.close()
-    print(ans)
-    # print(ans)
-    # print(type(ans))
-    # print(len(ans))
-    # print(f"This is the ans byte: {ans}")
-    # for i in range(len(ans)):
-    #     print(f"This is index: {i} and byte: {ans[i]}")
-
-    bpm_idx = 0
-    for i in range(len(ans)):
-        if ans[i] == 44:
-            bpm_idx = i
-            break
-    print(ans[:bpm_idx].decode('utf-8'))
-    print((time.time()-start_time))
-    print(ans)
-
-    ##################################
-    output from ser.readline()
-    b'65,994,491\r\n'
-    the class is bytes
-    length is 12
-
-    The bytes at each index refer to the ascii values
-    This is index: 0 and byte: 54
-    This is index: 1 and byte: 53
-    This is index: 2 and byte: 44
-    This is index: 3 and byte: 57
-    This is index: 4 and byte: 57
-    This is index: 5 and byte: 52
-    This is index: 6 and byte: 44
-    This is index: 7 and byte: 52
-    This is index: 8 and byte: 57
-    This is index: 9 and byte: 49
-    This is index: 10 and byte: 13
-    This is index: 11 and byte: 10
-    """
-
-    
 def read_bpm(port_output) -> int:
     """
     Converts serial port output to BPM
     Output of serial port format: b'65,994,491\r\n'   
     BPM,IBI,PulseSensor Raw Signal
-
-    IF WE CAN MANIPULATE DATA BEFORE THE TRANSFER
-    WE COULD SAVE TIME BY AVOIDING THE LOOP
     """
     bpm_idx = 0
     for i in range(len(port_output)):
