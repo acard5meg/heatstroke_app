@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Heat detection</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">User</string>
+    <string name="nav_header_subtitle">User profile</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">User Settings</string>
+    <string name="menu_gallery">Weather</string>
+    <string name="menu_slideshow">Heart Rate</string>
+
+    <string name="Age_settings">Age:</string>
+    <string name="Gender_settings">Gender:</string>
+    <string name="Weight_settings">Weight:</string>
+    <string name="Height_settings">Height:</string>
+    <string name="Heat_index_settings">Heat index:</string>
+    <string name="Outdoor_temperature_settings">Outdoor temperature:</string>
+    <string name="Humidity_settings">Humidity:</string>
+    <string name="Choose_settings">Choose:</string>
+</resources>
